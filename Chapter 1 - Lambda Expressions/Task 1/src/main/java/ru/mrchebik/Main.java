@@ -1,3 +1,5 @@
+package ru.mrchebik;
+
 import java.util.Arrays;
 import java.util.Random;
 
