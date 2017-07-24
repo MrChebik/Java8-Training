@@ -7,6 +7,6 @@ import ru.mrchebik.directory.Directory;
  */
 public class Main {
     public static void main(String[] args) {
-        new Directory().getAllSubdirectories("/home/mrchebik/idea-IU-171.4424.56/plugins");
+        Directory.getAllSubdirectories("/home/mrchebik/idea-IU-171.4424.56/plugins");
     }
 }

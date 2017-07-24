@@ -7,11 +7,11 @@ import java.nio.file.Paths;
  * Created by mrchebik on 7/23/17.
  */
 public class Directory {
-    public void getAllSubdirectories(String pathname) {
+    public static void getAllSubdirectories(String pathname) {
         checkDirectory(Paths.get(pathname).toFile());
     }
 
-    private void checkDirectory(File pathname) {
+    private static void checkDirectory(File pathname) {
         File[] directories = pathname.listFiles(File::isDirectory);
 
         if (directories != null) {
