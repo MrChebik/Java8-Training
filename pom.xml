@@ -12,6 +12,8 @@
     <modules>
         <module>Chapter 1 - Lambda Expressions/Task 1</module>
         <module>Chapter 1 - Lambda Expressions/Task 2</module>
+        <module>Chapter 1 - Lambda Expressions/Task 3</module>
+        <module>Chapter 1 - Lambda Expressions/Task 4</module>
     </modules>
 
 </project>
