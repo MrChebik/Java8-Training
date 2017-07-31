@@ -27,7 +27,7 @@ public class Main {
     private static final int MAX_LENGTH_OF_WORD = 24;
     private static final int LENGTH_OF_ARRAY    = 1000;
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         List<MultiThread> multiThreads = new ArrayList<>(NUMBER_OF_CORES);
         List<String>      words        = Arrays.asList(generateMassive(LENGTH_OF_ARRAY, MAX_LENGTH_OF_WORD));
 
