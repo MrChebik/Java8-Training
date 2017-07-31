@@ -1,11 +1,13 @@
 package ru.mrchebik.task1;
 
+import ru.mrchebik.task1.exception.ThrowingConsumer;
 import ru.mrchebik.task1.thread.MultiThread;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Consumer;
 
 /**
  * Task:
@@ -19,24 +21,41 @@ import java.util.Random;
  * Created by mrchebik on 7/30/17.
  */
 public class Main {
+    private static final int NUMBER_OF_CORES    = Runtime.getRuntime().availableProcessors();
+    private static final int CHECKED_LENGTH     = 12;
+
+    private static final int MAX_LENGTH_OF_WORD = 24;
+    private static final int LENGTH_OF_ARRAY    = 1000;
+
     public static void main(String[] args) throws InterruptedException {
-        int sizeOfCores = 4;
-        List<String> words = Arrays.asList(generateMassive(1000, 24));
+        List<MultiThread> multiThreads = new ArrayList<>(NUMBER_OF_CORES);
+        List<String>      words        = Arrays.asList(generateMassive(LENGTH_OF_ARRAY, MAX_LENGTH_OF_WORD));
 
-        List<MultiThread> multiThreads = new ArrayList<>(sizeOfCores);
-
-        int deliver = (words.size() / sizeOfCores);
-        for (int i = 0; i < sizeOfCores; i++) {
-            multiThreads.add(new MultiThread(words.subList(deliver * i, deliver * (i + 1)), 12));
+        int deliver = (words.size() / NUMBER_OF_CORES);
+        for (int i = 0; i < NUMBER_OF_CORES; i++) {
+            multiThreads.add(new MultiThread(words.subList(deliver * i, deliver * (i + 1)), CHECKED_LENGTH));
         }
 
         multiThreads.forEach(Thread::start);
-
-        for (MultiThread multiThread : multiThreads) {
-            multiThread.join();
-        }
+        multiThreads.forEach(handlingConsumerWrapper(Thread::join, InterruptedException.class));
 
         System.out.println(multiThreads.stream().mapToLong(MultiThread::getCountOfWords).sum());
+    }
+
+    private static <T, E extends Exception> Consumer<T> handlingConsumerWrapper(
+            ThrowingConsumer<T, E> throwingConsumer, Class<E> exceptionClass) {
+
+        return i -> {
+            try {
+                throwingConsumer.accept(i);
+            } catch (Exception ex) {
+                try {
+                    System.err.println("Exception occurred : " + exceptionClass.cast(ex).getMessage());
+                } catch (ClassCastException ccEx) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        };
     }
 
     private static String[] generateMassive(int lengthOfArray,
