@@ -31,7 +31,7 @@ public class Main {
         List<MultiThread> multiThreads = new ArrayList<>(NUMBER_OF_CORES);
         List<String>      words        = Arrays.asList(generateMassive(LENGTH_OF_ARRAY, MAX_LENGTH_OF_WORD));
 
-        int deliver = (words.size() / NUMBER_OF_CORES);
+        int deliver = words.size() / NUMBER_OF_CORES;
         for (int i = 0; i < NUMBER_OF_CORES; i++) {
             multiThreads.add(new MultiThread(words.subList(deliver * i, deliver * (i + 1)), CHECKED_LENGTH));
         }
