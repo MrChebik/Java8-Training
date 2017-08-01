@@ -1,5 +1,6 @@
 package ru.mrchebik.task9;
 
+import ru.mrchebik.Utils;
 import ru.mrchebik.task9.model.ArrayList2;
 import ru.mrchebik.task9.model.Collection2;
 
@@ -12,9 +13,9 @@ import java.util.Arrays;
  *
  * Created by mrchebik on 7/25/17.
  */
-public class Main {
+public class Main extends Utils {
     public static void main(String[] args) {
-        Collection2<String> strings = new ArrayList2<>(Arrays.asList("a", "ab", "abc", "as", "ew", "hy"));
-        strings.forEachIf(System.out::println, e -> e.length() == 2);
+        Collection2<String> strings = new ArrayList2<>(Arrays.asList(generateMassive(100, 10)));
+        strings.forEachIf(System.out::println, e -> e.length() == 5);
     }
 }

@@ -11,4 +11,12 @@
 
     <artifactId>chapter.2</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>java8-training</groupId>
+            <artifactId>java8-training-utils</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 </project>

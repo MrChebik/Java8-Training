@@ -1,13 +1,11 @@
 package ru.mrchebik.task1;
 
-import ru.mrchebik.task1.exception.ThrowingConsumer;
+import ru.mrchebik.Utils;
 import ru.mrchebik.task1.thread.MultiThread;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
-import java.util.function.Consumer;
 
 /**
  * Task:
@@ -20,7 +18,7 @@ import java.util.function.Consumer;
  *
  * Created by mrchebik on 7/30/17.
  */
-public class Main {
+public class Main extends Utils {
     private static final int NUMBER_OF_CORES    = Runtime.getRuntime().availableProcessors();
     private static final int CHECKED_LENGTH     = 12;
 
@@ -40,35 +38,5 @@ public class Main {
         multiThreads.forEach(handlingConsumerWrapper(Thread::join, InterruptedException.class));
 
         System.out.println(multiThreads.stream().mapToLong(MultiThread::getCountOfWords).sum());
-    }
-
-    private static <T, E extends Exception> Consumer<T> handlingConsumerWrapper(
-            ThrowingConsumer<T, E> throwingConsumer, Class<E> exceptionClass) {
-
-        return i -> {
-            try {
-                throwingConsumer.accept(i);
-            } catch (Exception ex) {
-                try {
-                    System.err.println("Exception occurred : " + exceptionClass.cast(ex).getMessage());
-                } catch (ClassCastException ccEx) {
-                    throw new RuntimeException(ex);
-                }
-            }
-        };
-    }
-
-    private static String[] generateMassive(int lengthOfArray,
-                                            int maxLengthOfWord) {
-        String[] words = new String[lengthOfArray];
-        Random random = new Random();
-        for (int i = 0; i < lengthOfArray; i++) {
-            StringBuilder word = new StringBuilder();
-            for (int j = 0; j < random.nextInt(maxLengthOfWord - 1) + 1; j++) {
-                word.append((char) (random.nextInt(25) + 97));
-            }
-            words[i] = word.toString();
-        }
-        return words;
     }
 }

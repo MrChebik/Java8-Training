@@ -1,4 +1,4 @@
-package ru.mrchebik.task1.exception;
+package ru.mrchebik.exception.service;
 
 /**
  * Created by mrchebik on 7/31/17.

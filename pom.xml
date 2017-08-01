@@ -12,6 +12,7 @@
     <modules>
         <module>Chapter 1 - Lambda Expressions</module>
         <module>Chapter 2 - The Stream API</module>
+        <module>Utils</module>
     </modules>
 
     <build>
