@@ -18,9 +18,9 @@ public class Main {
     }
 
     private static Stream<Long> generateRandom(long a,
-                                              long c,
-                                              long m,
-                                              long seed) {
+                                               long c,
+                                               long m,
+                                               long seed) {
         return Stream.iterate(seed, number -> (a * number + c) % m);
     }
 }
