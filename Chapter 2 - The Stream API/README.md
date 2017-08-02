@@ -23,3 +23,9 @@ Using `Stream.iterate`, make an infinite stream of random numbers — not by cal
 implementing a _linear congruential generator_. In such a generator, you start with _x[0] = seed_ and then produce 
 _x[n + 1] = 1 (a x[n] + c) % m_, for appropriate values of _a_, _c_, and _m_. You should implement a method with 
 parameters `a`, `c`, `m`, and `seed` that yields a `Stream<Long>`. Try out _a_ = 25214903917, _c_ = 11, and _m_ = 2^48.
+
+## Task 6
+The `characterStream` method in Section 2.3, "The `filter`, `map`, and `flatMap` Methods", on page 25, was a bit 
+clumsy, first filling an array list and then turning it into a stream. Write a stream-based one-linear instead. One 
+approach is to make a stream of integers from `0` to `s.length()` - `1` and map that with the `s::charAt` method 
+reference.
