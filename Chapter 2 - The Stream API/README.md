@@ -17,3 +17,9 @@ _War and Peace_) if you have a fast computer.
 ## Task 4
 Suppose you have an array `int[] values = { 1, 4, 9, 16 }`. What is `Stream.of(values)`? How do you get a stream of 
 `int` instead?
+
+## Task 5
+Using `Stream.iterate`, make an infinite stream of random numbers — not by calling `Math.random` but by directly 
+implementing a _linear congruential generator_. In such a generator, you start with _x[0] = seed_ and then produce 
+_x[n + 1] = 1 (a x[n] + c) % m_, for appropriate values of _a_, _c_, and _m_. You should implement a method with 
+parameters `a`, `c`, `m`, and `seed` that yields a `Stream<Long>`. Try out _a_ = 25214903917, _c_ = 11, and _m_ = 2^48.
