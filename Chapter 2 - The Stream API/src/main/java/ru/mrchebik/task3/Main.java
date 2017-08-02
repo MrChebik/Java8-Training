@@ -5,9 +5,7 @@ import ru.mrchebik.Utils;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Stream;
 
 /**
@@ -23,8 +21,6 @@ public class Main extends Utils {
 
     public static void main(String[] args) throws IOException {
         File file = new File(PATH_TO_WAR_AND_PEACE);
-        List<String> text = new ArrayList<>();
-        List<String> parallelText = new ArrayList<>();
         long start;
         long startParallel;
         long end;
@@ -32,28 +28,24 @@ public class Main extends Utils {
 
         if (!file.exists()) {
             start = System.currentTimeMillis();
-            Stream.of(generateMassive(1000, 24)).filter(word -> word.length() > 12).forEach(text::add);
+            Stream.of(generateMassive(1000, 24)).filter(word -> word.length() > 12);
             end = System.currentTimeMillis() - start;
 
             startParallel = System.currentTimeMillis();
-            Stream.of(generateMassive(1000, 24)).parallel().filter(word -> word.length() > 12).forEach(parallelText::add);
+            Stream.of(generateMassive(1000, 24)).parallel().filter(word -> word.length() > 12);
             endParallel = System.currentTimeMillis() - startParallel;
         } else {
             start = System.currentTimeMillis();
-            Files.lines(file.toPath()).map(line -> line.replaceAll("^\\W+|\\W+$", "").split("\\W+")).filter(line -> !"".equals(line[0])).flatMap(Arrays::stream).filter(word -> word.length() > 12).forEach(text::add);
+            Files.lines(file.toPath()).map(line -> line.replaceAll("^\\W+|\\W+$", "").split("\\W+")).filter(line -> !"".equals(line[0])).flatMap(Arrays::stream).filter(word -> word.length() > 12);
             end = System.currentTimeMillis() - start;
 
             startParallel = System.currentTimeMillis();
-            Files.lines(file.toPath()).parallel().map(line -> line.replaceAll("^\\W+|\\W+$", "").split("\\W+")).filter(line -> !"".equals(line[0])).flatMap(Arrays::stream).filter(word -> word.length() > 12).forEach(parallelText::add);
+            Files.lines(file.toPath()).parallel().map(line -> line.replaceAll("^\\W+|\\W+$", "").split("\\W+")).filter(line -> !"".equals(line[0])).flatMap(Arrays::stream).filter(word -> word.length() > 12);
             endParallel = System.currentTimeMillis() - startParallel;
         }
 
         System.out.println("General   : " + end + "ms\n" +
                 "Parallel  : " + endParallel + "ms\n" +
-                "Difference: " + (end - endParallel) + "ms" +
-                "\n=====\n" +
-                text + "\n" +
-                parallelText + "\n" +
-                "Equals: " + text.equals(parallelText));
+                "Difference: " + (end - endParallel) + "ms");
     }
 }
