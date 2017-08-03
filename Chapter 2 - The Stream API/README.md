@@ -37,3 +37,7 @@ good idea? Go ahead and write it anyway.
 ## Task 8
 Write a method `public static <T> Stream<T> zip(Stream<T> first, Stream<T> second)` that alternates elements from the 
 stream `first` and `second`, stopping when one of them runs out of elements.
+
+## Task 9
+Join all elements in a `Stream<ArrayList<T>>` to one `ArrayList<T>`. Show how to do this with the three forms of 
+`reduce`.
