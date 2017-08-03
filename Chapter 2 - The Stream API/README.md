@@ -29,3 +29,7 @@ The `characterStream` method in Section 2.3, "The `filter`, `map`, and `flatMap`
 clumsy, first filling an array list and then turning it into a stream. Write a stream-based one-linear instead. One 
 approach is to make a stream of integers from `0` to `s.length()` - `1` and map that with the `s::charAt` method 
 reference.
+
+## Task 7
+Your manager asks you to write a method `public static <T> boolean isFinite(Stream<T> stream)`. Why isn't that such a 
+good idea? Go ahead and write it anyway.
