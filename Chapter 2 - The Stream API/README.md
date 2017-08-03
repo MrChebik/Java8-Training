@@ -41,3 +41,7 @@ stream `first` and `second`, stopping when one of them runs out of elements.
 ## Task 9
 Join all elements in a `Stream<ArrayList<T>>` to one `ArrayList<T>`. Show how to do this with the three forms of 
 `reduce`.
+
+## Task 10
+Write a call to `reduce` that can be used to compute the average of a `Stream<Double>`. Why can't you simply compute 
+the sum and divide by `count()`?
