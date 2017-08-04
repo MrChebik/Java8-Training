@@ -54,3 +54,7 @@ are threadsafe. How can you achieve this?
 ## Task 12
 Count all short words in a parallel `Stream<String>`, as described in Section 2.13, "Parallel Streams", on page 40, by 
 updating an array of `AtomicInteger`. Use the atomic `getAndIncrement` method to safely increment each counter.
+
+## Task 13
+Repeat the preceding exercise, but filter out the short strings and use the `collect` method with 
+`Collectors.groupingBy` and `Collectors.counting`.
