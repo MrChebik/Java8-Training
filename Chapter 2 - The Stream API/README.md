@@ -45,3 +45,8 @@ Join all elements in a `Stream<ArrayList<T>>` to one `ArrayList<T>`. Show how to
 ## Task 10
 Write a call to `reduce` that can be used to compute the average of a `Stream<Double>`. Why can't you simply compute 
 the sum and divide by `count()`?
+
+## Task 11
+It should be possible to concurrently collect stream results in a single `ArrayList`, instead of merging multiple array 
+lists, provided it has been constructed with the stream's size, since concurrent `set` operations at disjoint positions 
+are threadsafe. How can you achieve this?
