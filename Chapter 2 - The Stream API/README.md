@@ -50,3 +50,7 @@ the sum and divide by `count()`?
 It should be possible to concurrently collect stream results in a single `ArrayList`, instead of merging multiple array 
 lists, provided it has been constructed with the stream's size, since concurrent `set` operations at disjoint positions 
 are threadsafe. How can you achieve this?
+
+## Task 12
+Count all short words in a parallel `Stream<String>`, as described in Section 2.13, "Parallel Streams", on page 40, by 
+updating an array of `AtomicInteger`. Use the atomic `getAndIncrement` method to safely increment each counter.
