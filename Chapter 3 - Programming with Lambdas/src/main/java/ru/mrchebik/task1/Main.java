@@ -27,7 +27,7 @@ public class Main extends Utils {
 
         String[] a = generateMassive(20, 5);
 
-        IntStream.range(0, a.length).forEach(i -> logIf(Level.FINEST, () -> i == 10, () -> "a[10] = " + a[i]));
+        IntStream.range(0, a.length).forEach(i -> logIf(Level.FINEST, () -> i == 10, () -> "a[10] = " + a[10]));
     }
 
     private static void logIf(Level level, Supplier<Boolean> condition, Supplier<String> message) {
