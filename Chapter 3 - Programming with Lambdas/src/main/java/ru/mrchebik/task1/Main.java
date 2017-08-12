@@ -32,7 +32,7 @@ public class Main extends Utils {
 
     private static void logIf(Level level, Supplier<Boolean> condition, Supplier<String> message) {
         if (logger.isLoggable(level) && condition.get()) {
-            logger.finest(message.get());
+            logger.log(level, message.get());
         }
     }
 }
