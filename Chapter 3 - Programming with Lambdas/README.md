@@ -23,3 +23,14 @@ Provide a method `withLock` so that one can call
 ## Task 3
 Java 1.4 added assertions to the language, with an `assert` keyword. Why were assertions not supplied as a library 
 feature? Could they be implemented as a library feature in Java 8?
+
+## Task 4
+How many functional interfaces with `Filter` in their name can you find in the Java API? Which ones add value over 
+`Predicate<T>`?
+
+## Task 5
+Here is a concrete example of a `ColorTransformer`. We want to put a frame around an image, like this: 
+![Photo](https://github.com/MrChebik/Java8-Training/blob/master/Chapter%203%20-%20Programming%20with%20Lambdas/task5-photo.png?raw=true)
+First, implement a variant of the `transform` method of Section 3.3, "Choosing a Functional Interface", on page 50, 
+with a `ColorTransformer` instead of an `UnaryOperator<Color>`. Then call it with an appropriate lambda expression to 
+put a 10 pixel gray frame replacing the pixels on the border of an image.
