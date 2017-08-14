@@ -36,3 +36,10 @@ Here is a concrete example of a `ColorTransformer`. We want to put a frame aroun
 First, implement a variant of the `transform` method of Section 3.3, "Choosing a Functional Interface", on page 50, 
 with a `ColorTransformer` instead of an `UnaryOperator<Color>`. Then call it with an appropriate lambda expression to 
 put a 10 pixel gray frame replacing the pixels on the border of an image.
+
+## Task 6
+Complete the method
+```
+    public static <T> Image transform(Image in, BiFunction<Color, T> f, T arg)
+```
+from Section 3.4, "Returning Functions", on page 53.
