@@ -43,3 +43,7 @@ Complete the method
     public static <T> Image transform(Image in, BiFunction<Color, T> f, T arg)
 ```
 from Section 3.4, "Returning Functions", on page 53.
+
+## Task 7
+Write a method that generates a `Comparator<String>` that can be normal or reversed, case-sensitive or case-insensitive 
+or space-insensitive, or any combination thereof. Your method should return a lambda expression.
