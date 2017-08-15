@@ -51,3 +51,9 @@ or space-insensitive, or any combination thereof. Your method should return a la
 ## Task 8
 Generalize Exercise 5 by writing a static method that yields a `ColorTransformer` that adds a frame of arbitrary 
 thickness and color to an image.
+
+## Task 9
+Write a method `lexicographicComparator(String... fieldNames)` that yields a comparator that compares the given fields 
+in the given order. For example, a `lexicographicComparator("lastname", "firstname")` takes two objects and, using 
+reflection, gets the values of the `lastname` field. If they are different, return the difference, otherwise move on to 
+the `firstname` field. If all fields match, return `0`.
