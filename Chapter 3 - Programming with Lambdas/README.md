@@ -57,3 +57,13 @@ Write a method `lexicographicComparator(String... fieldNames)` that yields a com
 in the given order. For example, a `lexicographicComparator("lastname", "firstname")` takes two objects and, using 
 reflection, gets the values of the `lastname` field. If they are different, return the difference, otherwise move on to 
 the `firstname` field. If all fields match, return `0`.
+
+## Task 10
+Why can't one call
+```
+    UnaryOperator op = Color::brighter;
+    Image finalImage = transform(image, op.compose(Color::grayscale));
+```
+Look carefully at the return type of the `compose` method of `UnaryOperator<T>`. Why is it not appropriate for the 
+`transform` method? What does that say about the utility of structural and nominal types when it comes to function 
+composition?
