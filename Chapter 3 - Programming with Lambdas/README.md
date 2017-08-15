@@ -67,3 +67,8 @@ Why can't one call
 Look carefully at the return type of the `compose` method of `UnaryOperator<T>`. Why is it not appropriate for the 
 `transform` method? What does that say about the utility of structural and nominal types when it comes to function 
 composition?
+
+## Task 11
+Implement static methods that can compose two `ColorTransformer` objects, and a static method that turns a 
+`UnaryOperator<Color>` into a `ColorTransformer` that ignores the _x-_ and _y-_ coordinates. Then use these methods to 
+add a gray frame to a brightened image. (See Exercise 5 for the gray frame.)
