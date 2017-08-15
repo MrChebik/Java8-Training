@@ -8,7 +8,7 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import ru.mrchebik.task5.color.ColorTransformer;
+import ru.mrchebik.task8.color.ColorTransformer;
 
 /**
  * Task:
