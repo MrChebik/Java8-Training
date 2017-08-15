@@ -47,3 +47,7 @@ from Section 3.4, "Returning Functions", on page 53.
 ## Task 7
 Write a method that generates a `Comparator<String>` that can be normal or reversed, case-sensitive or case-insensitive 
 or space-insensitive, or any combination thereof. Your method should return a lambda expression.
+
+## Task 8
+Generalize Exercise 5 by writing a static method that yields a `ColorTransformer` that adds a frame of arbitrary 
+thickness and color to an image.
