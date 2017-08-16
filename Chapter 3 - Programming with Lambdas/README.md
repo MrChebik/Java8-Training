@@ -76,3 +76,12 @@ add a gray frame to a brightened image. (See Exercise 5 for the gray frame.)
 ## Task 12
 Enhance the `LatentImage` class in Section 3.6, "Laziness", on page 56, so that it supports both `UnaryOperator<Color>` 
 and `ColorTransformer`. Hint: Adapt the former to the latter.
+
+## Task 13
+Convolution filters such as blur or edge detection compute a pixel from neighboring pixels. To blur an image, replace 
+each color value by the average of itself and its eight neighbors. For edge detection, replace each color value _c_ 
+with _4c — n — e — s — w_, where the other colors are those of the pixel to the north, east, south, and west. Note that 
+these cannot be implemented lazily, using the approach of Section 3.6, "Laziness", on page 56, since they require the 
+image from the previous stage (or at least the neighboring pixels) to have been computed. Enhance the lazy image 
+processing to deal with these operations. Force computation of the previous stage when one of these operators is 
+evaluated.
