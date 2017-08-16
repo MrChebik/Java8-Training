@@ -72,3 +72,7 @@ composition?
 Implement static methods that can compose two `ColorTransformer` objects, and a static method that turns a 
 `UnaryOperator<Color>` into a `ColorTransformer` that ignores the _x-_ and _y-_ coordinates. Then use these methods to 
 add a gray frame to a brightened image. (See Exercise 5 for the gray frame.)
+
+## Task 12
+Enhance the `LatentImage` class in Section 3.6, "Laziness", on page 56, so that it supports both `UnaryOperator<Color>` 
+and `ColorTransformer`. Hint: Adapt the former to the latter.
