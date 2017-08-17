@@ -26,12 +26,15 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Image image = new Image("photo.png");
+        long start = System.nanoTime();
         Image finalImage = LatentImage.from(image)
                 .transform(Color::brighter)
                 .transform(LatentEffect::blur)
                 .transform(LatentEffect::edgeDetection)
                 .transform(LatentEffect::frame)
                 .toImage();
+        long end = System.nanoTime() - start;
+        System.out.println(end);
         primaryStage.setScene(new Scene(new HBox(new ImageView(finalImage))));
         primaryStage.show();
     }
