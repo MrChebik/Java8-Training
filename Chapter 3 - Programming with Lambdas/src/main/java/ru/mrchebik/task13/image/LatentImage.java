@@ -14,23 +14,16 @@ import java.util.function.*;
  */
 public class LatentImage {
     private static Image in;
-    private static List<ColorTransformer> pendingOperations;
+    private static List<ColorTransformer> pendingOperations = new ArrayList<>();
 
     public static LatentImage from(Image image) {
         in = image;
-        pendingOperations = new ArrayList<>();
 
         return new LatentImage();
     }
 
     public LatentImage transform(UnaryOperator<Color> f) {
         pendingOperations.add(map(f));
-
-        return this;
-    }
-
-    public LatentImage transform(ColorTransformer f) {
-        pendingOperations.add(f);
 
         return this;
     }
@@ -65,5 +58,9 @@ public class LatentImage {
 
     public static Image getImage() {
         return in;
+    }
+
+    public static List<ColorTransformer> getPendingOperations() {
+        return pendingOperations;
     }
 }

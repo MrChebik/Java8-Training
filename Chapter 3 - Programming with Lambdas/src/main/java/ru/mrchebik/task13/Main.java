@@ -28,10 +28,9 @@ public class Main extends Application {
         Image image = new Image("photo.png");
         Image finalImage = LatentImage.from(image)
                 .transform(Color::brighter)
-                /*.transform(LatentEffect::blur)*/
+                .transform(LatentEffect::blur)
                 .transform(LatentEffect::edgeDetection)
-                .transform(LatentEffect::edgeDetection)
-                /*.transform(LatentEffect::frame)*/
+                .transform(LatentEffect::frame)
                 .toImage();
         primaryStage.setScene(new Scene(new HBox(new ImageView(finalImage))));
         primaryStage.show();
