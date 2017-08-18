@@ -85,3 +85,13 @@ these cannot be implemented lazily, using the approach of Section 3.6, "Laziness
 image from the previous stage (or at least the neighboring pixels) to have been computed. Enhance the lazy image 
 processing to deal with these operations. Force computation of the previous stage when one of these operators is 
 evaluated.
+
+## Task 14
+To deal with lazy evaluation on a per-pixel basis, change the transformers so that they are passed a `PixelReader` 
+object from which they can read other pixels in the image. For example, `(x, y, reader) -> reader.get(width - x, y)` is 
+a mirroring operation. The convolution filters from the preceding exercises can be easily implemented in terms of such 
+a reader. The straightforward operations would simply have the form `(x, y, reader) -> reader.get(x, y).grayscale()`, 
+and you can provide an adapter from `UnaryOperation<Color>`. A `PixelReader` is at a particular level in the pipeline 
+of operations. Keep a cache recently read pixels at each level in the pipeline. If a reader is asked for a pixel, it 
+looks in the cache (or in the original image at level 0); if that fails, it constructs a reader that asks the previous 
+transform.
