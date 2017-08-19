@@ -95,3 +95,7 @@ and you can provide an adapter from `UnaryOperation<Color>`. A `PixelReader` is 
 of operations. Keep a cache recently read pixels at each level in the pipeline. If a reader is asked for a pixel, it 
 looks in the cache (or in the original image at level 0); if that fails, it constructs a reader that asks the previous 
 transform.
+
+## Task 15
+Combine the lazy evaluation of Section 3.6, "Laziness", on page 56, with the parallel evaluation of Section 3.7, 
+"Parallelizing Operations", on page 57.
