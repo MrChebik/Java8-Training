@@ -112,3 +112,8 @@ Implement a `doInParallelAsync(Runnable first, Runnable second, Consumer<Throwab
 Implement a version of the `unchecked` method in Section 3.8, "Dealing with Exceptions", on page 58, that generates a 
 `Function<T, U>` from a lambda that throws checked exceptions. Note that you will need to find or provide a functional 
 interface whose abstract method throws arbitrary exceptions.
+
+## Task 19
+Look at the `Stream<T>` method 
+`<U> U reduce(U identity, BiFunction<U, ? super T, U> accumulator, BinaryOperator<U> combiner)`. Should `U` be declared 
+as `? super U` in the first type argument to `BiFunction`? Why or why not?
