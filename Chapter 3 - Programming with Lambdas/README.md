@@ -107,3 +107,8 @@ Implement the `doInOrderAsync` of Section 3.8, "Dealing with Exceptions", on pag
 ## Task 17
 Implement a `doInParallelAsync(Runnable first, Runnable second, Consumer<Throwable>)` method that executes `first` and 
 `second` in parallel, calling the handler if either method throws an exception.
+
+## Task 18
+Implement a version of the `unchecked` method in Section 3.8, "Dealing with Exceptions", on page 58, that generates a 
+`Function<T, U>` from a lambda that throws checked exceptions. Note that you will need to find or provide a functional 
+interface whose abstract method throws arbitrary exceptions.
