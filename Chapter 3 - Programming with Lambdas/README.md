@@ -103,3 +103,7 @@ Combine the lazy evaluation of Section 3.6, "Laziness", on page 56, with the par
 ## Task 16
 Implement the `doInOrderAsync` of Section 3.8, "Dealing with Exceptions", on page 58, where the second parameter is a 
 `BiConsumer<T, Throwable>`. Provide a plausible use case. Do you still need the third parameter?
+
+## Task 17
+Implement a `doInParallelAsync(Runnable first, Runnable second, Consumer<Throwable>)` method that executes `first` and 
+`second` in parallel, calling the handler if either method throws an exception.
