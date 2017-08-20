@@ -99,3 +99,7 @@ transform.
 ## Task 15
 Combine the lazy evaluation of Section 3.6, "Laziness", on page 56, with the parallel evaluation of Section 3.7, 
 "Parallelizing Operations", on page 57.
+
+## Task 16
+Implement the `doInOrderAsync` of Section 3.8, "Dealing with Exceptions", on page 58, where the second parameter is a 
+`BiConsumer<T, Throwable>`. Provide a plausible use case. Do you still need the third parameter?
