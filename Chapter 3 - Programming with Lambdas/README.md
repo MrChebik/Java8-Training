@@ -120,3 +120,7 @@ as `? super U` in the first type argument to `BiFunction`? Why or why not?
 
 ## Task 20
 Supply a static method `<T, U> List<U> map(List<T>, Function<T, U>)`.
+
+## Task 21
+Supply a static method `<T, U> Future<U> map(Future<T>, Function<T, U>)`. Return an object of an anonymous class that 
+implements all methods of the `Future` interface. In the `get` methods, invoke the function.
