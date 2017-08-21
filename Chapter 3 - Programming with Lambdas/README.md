@@ -127,3 +127,6 @@ implements all methods of the `Future` interface. In the `get` methods, invoke t
 
 ## Task 22
 Is there a `flatMap` operation for `CompletableFuture`? If so, what is it?
+
+## Task 23
+Define a `map` operation for a class `Pair<T>` that represents a pair of objects of type `T`.
