@@ -130,3 +130,6 @@ Is there a `flatMap` operation for `CompletableFuture`? If so, what is it?
 
 ## Task 23
 Define a `map` operation for a class `Pair<T>` that represents a pair of objects of type `T`.
+
+## Task 24
+Can you define a `flatMap` method for `Pair<T>`? If so, what is it? If not, why not?
