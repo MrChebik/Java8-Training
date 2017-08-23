@@ -15,3 +15,7 @@ using a property object only when the `xxxProperty()` method is called for the f
 Consider a class with many JavaFX properties, most of which are never changed from a default. Show how the property can 
 be set up on demand, when it is set to a nondefault value or when the `xxxProperty()` method is called for the first 
 time.
+
+# Task 4
+Enhance the program in Section 4.5, "Bindings", on page 75 so that the circle stays centered and always touches at 
+least two of the sides of the scene.
