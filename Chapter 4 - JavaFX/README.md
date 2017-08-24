@@ -40,3 +40,8 @@ Center the top and bottom buttons in Figure 4-7.
 
 # Task 7
 Find out how to set the border of a control without using CSS.
+
+# Task 8
+Since there is no JavaFX-specific knowledge in parsing FXML files, come up with an example where you load an object 
+that has nothing to do with JavaFX, with some nested objects, and set the properties in FXML syntax. Extra credit if 
+you use injection.

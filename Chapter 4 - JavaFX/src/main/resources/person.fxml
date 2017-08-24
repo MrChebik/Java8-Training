@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import ru.mrchebik.task8.person.Person?>
+<?import ru.mrchebik.task8.person.info.Address?>
+<?import ru.mrchebik.task8.person.info.Name?>
+<Person xmlns:fx="http://javafx.com/fxml" fx:controller="ru.mrchebik.task8.Main">
+    <name>
+        <Name fx:id="name" firstname="John" lastname="Black"/>
+    </name>
+    <address>
+        <Address fx:id="address" street="Street" city="City" county="Country"/>
+    </address>
+</Person>
