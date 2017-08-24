@@ -37,3 +37,6 @@ invalidation and change listeners are fired when any of the inputs become invali
 
 # Task 6
 Center the top and bottom buttons in Figure 4-7.
+
+# Task 7
+Find out how to set the border of a control without using CSS.
