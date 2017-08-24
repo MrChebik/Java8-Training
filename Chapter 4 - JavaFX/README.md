@@ -48,3 +48,6 @@ you use injection.
 
 # Task 9
 Animate a circle, representing a planet, so it travels along an elliptical orbit. Use a `PathTransition`.
+
+# Task 10
+Using the web viewer, implement a browser with a URL bar and a back button. Hint: `WebEngine.getHistory()`.
