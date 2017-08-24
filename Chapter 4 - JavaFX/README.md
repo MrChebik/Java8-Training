@@ -34,3 +34,6 @@ invalidation and change listeners are fired when any of the inputs become invali
     larger.disableProperty().bind(observe(
         t -> t >= 100, gauge.widthProperty()));
 ```
+
+# Task 6
+Center the top and bottom buttons in Figure 4-7.
