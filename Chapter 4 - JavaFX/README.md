@@ -45,3 +45,6 @@ Find out how to set the border of a control without using CSS.
 Since there is no JavaFX-specific knowledge in parsing FXML files, come up with an example where you load an object 
 that has nothing to do with JavaFX, with some nested objects, and set the properties in FXML syntax. Extra credit if 
 you use injection.
+
+# Task 9
+Animate a circle, representing a planet, so it travels along an elliptical orbit. Use a `PathTransition`.
