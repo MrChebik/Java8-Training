@@ -25,3 +25,6 @@ should display
     25 26 27 28 29 30 31
 ```
 indicating that March 1 is a Friday. (Show the weekend at the end of the week.)
+
+# Task 5
+Write a program that prints how many days you have been alive.
