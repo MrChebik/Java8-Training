@@ -15,6 +15,7 @@
         <module>Utils</module>
         <module>Chapter 3 - Programming with Lambdas</module>
         <module>Chapter 4 - JavaFX</module>
+        <module>Chapter 5 - The New Date and Time API</module>
     </modules>
 
     <build>
