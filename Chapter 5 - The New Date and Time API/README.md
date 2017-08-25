@@ -28,3 +28,6 @@ indicating that March 1 is a Friday. (Show the weekend at the end of the week.)
 
 # Task 5
 Write a program that prints how many days you have been alive.
+
+# Task 6
+List all Friday the 13th in the twentieth century.
