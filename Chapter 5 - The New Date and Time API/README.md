@@ -39,3 +39,6 @@ on a given date from 10:00 to 11:00). Provide a method to check whether two inte
 # Task 8
 Obtain the offsets of today's date in all supported time zoned for the current time instant, turning 
 `ZoneId.getAvailableIds` into a stream and using stream operations.
+
+# Task 9
+Again using stream operations, find all time zones whose offsets aren't full hours.
