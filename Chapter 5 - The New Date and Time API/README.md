@@ -31,3 +31,7 @@ Write a program that prints how many days you have been alive.
 
 # Task 6
 List all Friday the 13th in the twentieth century.
+
+# Task 7
+Implement a `TimeInterval` class that represents an interval of time, suitable for calendar events (such as a meeting 
+on a given date from 10:00 to 11:00). Provide a method to check whether two intervals overlap.
