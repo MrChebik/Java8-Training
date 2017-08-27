@@ -20,9 +20,9 @@ public class Main {
     }
 
     private static LocalTime getArrivalTime(LocalTime departure,
-                                           ZoneId location,
-                                           Duration duration,
-                                           ZoneId destination) {
+                                            ZoneId location,
+                                            Duration duration,
+                                            ZoneId destination) {
         ZonedDateTime departureDateTime = ZonedDateTime.of(
                 LocalDate.now(),
                 departure,
