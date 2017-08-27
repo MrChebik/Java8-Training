@@ -50,3 +50,7 @@ arrive? Write a program that can handle calculations like this.
 # Task 11
 Your return flight leaves Frankfurt at 14:05 and arrives in Los Angeles at 16:40. How long is the flight? Write a 
 program that can handle calculations like this. 
+
+# Task 12
+Write a program that solves the problem described at the beginning of Section 5.5, "Zoned Time", on page 109. Read a 
+set of appointments in different time zones and alert the User which ones are due within the next hour in local time.
