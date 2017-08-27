@@ -42,3 +42,7 @@ Obtain the offsets of today's date in all supported time zoned for the current t
 
 # Task 9
 Again using stream operations, find all time zones whose offsets aren't full hours.
+
+# Task 10
+Your flight from Los Angeles to Frankfurt leaves at 3:05 pm local time and takes 10 hours and 50 minutes. When does it 
+arrive? Write a program that can handle calculations like this.
