@@ -16,6 +16,7 @@
         <module>Chapter 3 - Programming with Lambdas</module>
         <module>Chapter 4 - JavaFX</module>
         <module>Chapter 5 - The New Date and Time API</module>
+        <module>Chapter 6 - Concurrency Enhancements</module>
     </modules>
 
     <build>
