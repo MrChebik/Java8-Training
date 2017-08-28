@@ -10,3 +10,6 @@ Does a `LongAdder` help with yielding a sequence of increasing IDs? Why or why n
 ## Task 3
 Generate 1,000 threads, each of which increments a counter 100,000 times. Compare the performance of using `AtomicLong` 
 versus `LongAdder`.
+
+## Task 4
+Use a `LongAccumulator` to compute the maximum or minimum of the accumulated elements.
