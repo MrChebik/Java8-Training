@@ -21,3 +21,7 @@ map.
 
 ## Task 6
 Repeat the preceding exercise, but use `computeIfAbsent` instead. What is the advantage of this approach?
+
+## Task 7
+In a `ConcurrentHashMap<String, Long>`, find the key with maximum value (breaking ties arbitrarily). Hint: 
+`reduceEntries`.
