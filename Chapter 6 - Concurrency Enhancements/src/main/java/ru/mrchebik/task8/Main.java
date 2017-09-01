@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 /**
  * Task:
- *      How large does an array have to be for `Arrays.parallelSort` to be faster that `Arrays.sort` on your computer?
+ *      How large does an array have to be for 'Arrays.parallelSort' to be faster that 'Arrays.sort' on your computer?
  *
  * Created by mrchebik on 9/1/17.
  */
