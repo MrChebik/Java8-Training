@@ -25,3 +25,6 @@ Repeat the preceding exercise, but use `computeIfAbsent` instead. What is the ad
 ## Task 7
 In a `ConcurrentHashMap<String, Long>`, find the key with maximum value (breaking ties arbitrarily). Hint: 
 `reduceEntries`.
+
+## Task 8
+How large does an array have to be for `Arrays.parallelSort` to be faster that `Arrays.sort` on your computer?
