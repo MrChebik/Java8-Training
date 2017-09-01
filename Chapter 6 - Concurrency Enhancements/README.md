@@ -18,3 +18,6 @@ Use a `LongAccumulator` to compute the maximum or minimum of the accumulated ele
 Write an application in which multiple threads read all words from a collection of files. Use a 
 `ConcurrentHashMap<String, Set<File>>` to track in which files each word occurs. Use the `merge` method to update the 
 map.
+
+## Task 6
+Repeat the preceding exercise, but use `computeIfAbsent` instead. What is the advantage of this approach?
