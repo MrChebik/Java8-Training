@@ -28,3 +28,9 @@ In a `ConcurrentHashMap<String, Long>`, find the key with maximum value (breakin
 
 ## Task 8
 How large does an array have to be for `Arrays.parallelSort` to be faster that `Arrays.sort` on your computer?
+
+## Task 9
+You can use the `parallelPrefix` method to parallelize the computation of Fibonacci numbers. We use the fact that the 
+`n`th Fibonacci number is the top left coefficient of F^`n`, where F = ( 1 1 1 0 ). Make an array filled with 2 × 2 
+matrices. Define a `Matrix` class with a multiplication method, use `parallelSetAll` to make an array of matrices, and 
+use `parallelPrefix` to multiply them.
