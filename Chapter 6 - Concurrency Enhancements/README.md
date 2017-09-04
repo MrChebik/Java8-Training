@@ -34,3 +34,10 @@ You can use the `parallelPrefix` method to parallelize the computation of Fibona
 `n`th Fibonacci number is the top left coefficient of F^`n`, where F = ( 1 1 1 0 ). Make an array filled with 2 × 2 
 matrices. Define a `Matrix` class with a multiplication method, use `parallelSetAll` to make an array of matrices, and 
 use `parallelPrefix` to multiply them.
+
+## Task 10
+Write a program that asks the user for a URL, then rads the web page at that URL, and then displays all the links. Use 
+a `CompletableFuture` for each stage. Don't call `get`. To prevent your program from terminating prematurely, call
+```
+    ForkJoinPool.commonPool().awaitQuiescence(10, TimeUnit.SECONDS);
+```
