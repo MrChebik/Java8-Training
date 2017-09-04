@@ -41,3 +41,14 @@ a `CompletableFuture` for each stage. Don't call `get`. To prevent your program 
 ```
     ForkJoinPool.commonPool().awaitQuiescence(10, TimeUnit.SECONDS);
 ```
+
+## Task 11
+Write a method
+```
+    public static <T> CompletableFuture<T> repeat(
+        Supplier<T> action, Predicate<T> until)
+```
+that asynchronously repeats the action until it produces a value that is accepted by the `until` function, which should 
+also run asynchronously. Test with a function that reads a `java.net.PasswordAuthentication` from the console, and a 
+function that simulates a validity check by sleeping for a second and then checking that the password is "secret". 
+Hint: Use recursion.
